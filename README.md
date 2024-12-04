@@ -89,6 +89,9 @@ Ensure you have **Python 3.7+** installed on your machine. The necessary librari
 
 ---
 
+Here is the modified **Getting Started** section formatted for your README file:
+
+```markdown
 ## 🚀 Getting Started
 
 Follow these steps to run the RAG-based Q/A system.
@@ -135,7 +138,17 @@ jupyter notebook RAG_implementation.ipynb
 
 The notebook will open in your browser. Run the cells in sequence to see the RAG model in action! 🎉
 
-### 5. Using Custom PDF Files
+### 5. Using Custom Files
+
+- **Dataset**: The `Dataset` folder contains `quicksell_input.pdf`, which can be replaced with your own dataset files.
+- **Vector_db_dir**: Includes modular code (`Functions.py` and `main.py`). You can modify these files as per your needs for extending functionalities.
+
+### 6. 📈 Model Outputs
+
+The RAG model retrieves information from the documents and generates answers based on the input query. View these results directly in the notebook as the model performs retrieval and generation.
+```
+
+You can copy and paste this section into the appropriate location in your README file! Let me know if further assistance is needed.
 
 This implementation currently uses a file named `Merged_Papers_RAG.pdf` for document retrieval. To use your own documents, replace this file with your PDFs. You’ll see how RAG retrieves relevant information to answer queries based on your custom documents.
 
