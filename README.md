@@ -179,8 +179,6 @@ The system generates responses by retrieving information from the documents and 
 
 Now you’re all set to explore and enhance the RAG-based system!
 ```
-
-This revised version avoids mentioning Jupyter notebooks and focuses entirely on the modular coding structure with `Functions.py` and `main.py`, providing proper context and step-by-step instructions. Let me know if further refinements are needed!
 ## 🔑 Key Features
 
 - **Combines Retrieval and Generation**: RAG provides an optimal balance between data retrieval and generative responses, leveraging the best of both worlds.
