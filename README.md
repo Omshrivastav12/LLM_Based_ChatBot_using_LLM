@@ -87,27 +87,38 @@ This project utilizes a **Weaviate** database for semantic search. To access the
 
 Ensure you have **Python 3.7+** installed on your machine. The necessary libraries will be installed from the `requirements.txt` file after setting up the environment.
 
----
-
-Here is the modified **Getting Started** section formatted for your README file:
-
 ```markdown
 ## 🚀 Getting Started
 
-Follow these steps to run the RAG-based Q/A system.
+Follow these steps to set up and run the RAG-based Q/A system. The project is structured modularly, with key components and files organized for clarity.
 
 ### 1. Clone the Repository
 
-First, clone this repository to your local machine.
+Clone the repository to your local system using Git:
 
 ```bash
 git clone https://github.com/Omshrivastav12/your-repo-name.git
 cd your-repo-name
 ```
 
-### 2. Set Up a Virtual Environment (Optional but Recommended)
+### 2. Project Structure
 
-Setting up a virtual environment keeps dependencies isolated and easy to manage.
+Below is the project structure for your reference:
+
+```plaintext
+├── Dataset/                         # Contains sample dataset (replaceable with your own data)
+│   └── quicksell_input.pdf          # Example input dataset
+├── Vector_db_dir/                   # Directory containing the modular code
+│   ├── Functions.py                 # Script for reusable functions
+│   ├── main.py                      # Main script for execution
+│   └── requirements.txt             # Dependencies specific to vector database
+├── Merged_Papers_RAG.pdf            # Sample dataset (replaceable with your documents)
+├── README.md                        # Project description and setup instructions
+```
+
+### 3. Set Up a Virtual Environment (Optional but Recommended)
+
+Creating a virtual environment ensures that dependencies are isolated and manageable:
 
 ```bash
 # Create a virtual environment
@@ -120,44 +131,56 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-### 3. Install Dependencies
+### 4. Install Dependencies
 
-Install the required libraries using the `requirements.txt` file.
+Install the required libraries from the `requirements.txt` files:
 
-```bash
-pip install -r requirements.txt
-```
+- Use the main `requirements.txt` file for the core dependencies:
 
-### 4. Run the Jupyter Notebook
+  ```bash
+  pip install -r requirements.txt
+  ```
 
-Now, open the **Jupyter Notebook** to interact with the RAG model.
+- If using the modular functions in the `Vector_db_dir`, navigate to that directory and install its specific dependencies:
 
-```bash
-jupyter notebook RAG_implementation.ipynb
-```
+  ```bash
+  cd Vector_db_dir
+  pip install -r requirements.txt
+  cd ..
+  ```
 
-The notebook will open in your browser. Run the cells in sequence to see the RAG model in action! 🎉
+### 5. Run the Code
 
-### 5. Using Custom Files
+The project uses modular Python scripts for execution. Follow these steps:
 
-- **Dataset**: The `Dataset` folder contains `quicksell_input.pdf`, which can be replaced with your own dataset files.
-- **Vector_db_dir**: Includes modular code (`Functions.py` and `main.py`). You can modify these files as per your needs for extending functionalities.
+1. Navigate to the `Vector_db_dir` directory.
+2. Run the `main.py` file:
 
-### 6. 📈 Model Outputs
+   ```bash
+   python Vector_db_dir/main.py
+   ```
 
-The RAG model retrieves information from the documents and generates answers based on the input query. View these results directly in the notebook as the model performs retrieval and generation.
-```
+   This will initialize the system and start processing based on the provided configurations.
 
-You can copy and paste this section into the appropriate location in your README file! Let me know if further assistance is needed.
+### 6. Using Custom Files
 
-This implementation currently uses a file named `Merged_Papers_RAG.pdf` for document retrieval. To use your own documents, replace this file with your PDFs. You’ll see how RAG retrieves relevant information to answer queries based on your custom documents.
+- **Dataset**: Replace the `quicksell_input.pdf` file in the `Dataset` folder with your own dataset if needed.
+- **Vector_db_dir**: Contains modular scripts:
+  - `Functions.py`: Defines reusable functions for the RAG system.
+  - `main.py`: Orchestrates the execution of the system.
 
-### 6. 📈 Model Outputs
+Make modifications to these files as per your requirements to extend functionality or integrate custom features.
 
-The RAG model retrieves information from the documents and generates answers based on the input query. View these results directly in the notebook as the model performs retrieval and generation.
+### 7. Output Results
+
+The system generates responses by retrieving information from the documents and performing relevant processing. Review the output logs or generated files based on the input queries and model results.
 
 ---
 
+Now you’re all set to explore and enhance the RAG-based system!
+```
+
+This revised version avoids mentioning Jupyter notebooks and focuses entirely on the modular coding structure with `Functions.py` and `main.py`, providing proper context and step-by-step instructions. Let me know if further refinements are needed!
 ## 🔑 Key Features
 
 - **Combines Retrieval and Generation**: RAG provides an optimal balance between data retrieval and generative responses, leveraging the best of both worlds.
